@@ -7,7 +7,7 @@
 
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/main2.css">
+<link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
 <link rel="stylesheet"
@@ -18,12 +18,11 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
-
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
 </head>
 
 <body>
@@ -39,10 +38,11 @@
 	<section class="main">
 		<div class="container">
 			<h2>Stacked form</h2>
-			<form action="/action_page.php">
+			<form id="register">
 				<div class="form-group">
 					<label for="name">Full name:</label> <input type="text"
-						class="form-control" id="name" name="name" required="required" autocomplete="name">
+						class="form-control" id="name" name="name" required="required"
+						autocomplete="name">
 				</div>
 				<div class="form-group">
 					<label for="phone">Phone:</label> <input type="tel"
@@ -54,17 +54,19 @@
 						class="form-control" id="email" name="email" required="required">
 				</div>
 				<div class="form-group">
-					<label for="cities">City:</label> <select name="cities" id="cities" required="required">
+					<label for="city">City:</label> <select name="city" id="city"
+						required="required">
 						<option value=""></option>
-						<option value="sp">São Paulo</option>
-						<option value="rj">Rio de Janeiro</option>
-						<option value="bh">Belo Horizonte</option>
-						<option value="oc">Other City</option>
+						<option value="São Paulo">São Paulo</option>
+						<option value="Rio de Janeiro">Rio de Janeiro</option>
+						<option value="Belo Horizonte">Belo Horizonte</option>
+						<option value="Other City">Other City</option>
 					</select>
 				</div>
 				<div class="form-group">
 					<label for="neighborhood">Neighborhood:</label> <select
 						name="neighborhood" id="neighborhood" required="required">
+						<option value="One">One</option>
 					</select>
 				</div>
 				<div class="form-group">
@@ -73,7 +75,8 @@
 				</div>
 				<div class="form-group">
 					<label for="parking">Parking:</label> <input type="text"
-						class="form-control" id="parking" name="parking" required="required">
+						class="form-control" id="parking" name="parking"
+						required="required">
 				</div>
 				<div class="form-group">
 					<label for="adress">Adress:</label> <input type="text"
@@ -85,7 +88,8 @@
 				</div>
 				<div class="form-group">
 					<label for="bedrooms">Bedrooms:</label> <input type="number"
-						class="form-control" id="bedrooms" name="bedrooms" required="required">
+						class="form-control" id="bedrooms" name="bedrooms"
+						required="required">
 				</div>
 				<div class="form-group">
 					<label for="date">Initial date:</label>
@@ -93,7 +97,8 @@
 					<div class="form-group mb-4">
 						<div class="datepicker date input-group p-0 shadow-sm">
 							<input type="text" placeholder="Choose a initial date"
-								class="form-control py-4 px-4" id="date" name="date" required="required">
+								class="form-control py-4 px-4" id="date" name="date"
+								required="required">
 							<div class="input-group-append">
 								<span class="input-group-text px-4"><i
 									class="fa fa-clock-o"></i></span>
@@ -108,13 +113,87 @@
 				</div>
 				<div class="form-group form-check">
 					<label class="form-check-label"> <input
-						class="form-check-input" type="checkbox" name="remember">
-						Remember me
+						class="form-check-input" type="checkbox" id="remember"
+						name="remember"> Remember me
 					</label>
 				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="button" class="btn btn-primary" onclick="sendData()">Get
+					in touch</button>
 			</form>
 		</div>
 	</section>
+
+	<section class="result">
+		<div class="container">
+			<div class="resultForm">
+				<div class="row">
+					<div class="col-sm-12">
+						<span>Name:</span> <span id="newName" name="newName"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<span>Phone:</span> <span id="newPhone" name="newPhone"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<span>Email:</span> <span id="newEmail" name="newEmail"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<span>City:</span> <span id="newCity" name="newCity"></span>
+					</div>
+					<div class="col-sm-6">
+						<span>Neighborhood:</span> <span id="newNeighborhood"
+							name="newNeighborhood"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<span>Total sqm:</span> <span id="newSqm" name="newSqm"></span>
+					</div>
+					<div class="col-sm-6">
+						<span>Parking:</span> <span id="newParking" name="newParking"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<span>Adress:</span> <span id="newAdress" name="newAdress"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-7">
+						<span>Estimated rental value:</span> <span id="newErv"
+							name="newErv"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<span>Bedrooms:</span> <span id="newBedrooms" name="newBedrooms"></span>
+					</div>
+					<div class="col-sm-6">
+						<span>Initial date:</span> <span id="newDate" name="newDate"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<span>Remarks:</span> <span id="newRemarks" name="newRemarks"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<span id="newRemember" name="newRemember">We are going to remember you!</span>
+					</div>
+				</div>
+			</div>
+	</section>
+
+	<script>
+		$(document).ready(function() {
+			console.log(document.getElementById("name").value);
+		});
+	</script>
 </body>
 </html>
