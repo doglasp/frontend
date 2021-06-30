@@ -2,6 +2,30 @@
 
 .main {
 	margin-top: 12px;
+	width: 100%;
+}
+
+.my-header {
+	margin-top: 90px;
+}
+
+.slogan-title-golden {
+	font-weight: bold;
+	color: goldenrod;
+}
+
+.slogan-main-title {
+	font-weight: bold;
+}
+
+.register-form {
+	background-color: white;
+	margin-bottom: 20px;
+}
+
+.form-title {
+	margin-top: 20px;
+	font-weight: bold;
 }
 
 .datepicker td, .datepicker th {
@@ -12,4 +36,16 @@
 
 .datepicker {
 	margin-bottom: 3rem;
+}
+
+.get-in-touch {
+	margin-bottom: 20px;
+}
+
+.result-form{
+	padding: 20px;
+}
+
+#result-section{
+	padding: 50px;
 }

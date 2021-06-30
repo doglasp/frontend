@@ -2,6 +2,10 @@
  * 
  */
 
+/**
+ * 
+ */
+
 
 $(function() {
 
@@ -11,16 +15,11 @@ $(function() {
 		format: "dd/mm/yyyy"
 	});
 
-
-	// FOR DEMO PURPOSE
-	$('#reservationDate').on('change', function() {
-		var pickedDate = $('input').val();
-		$('#pickedDate').html(pickedDate);
-	});
+	hideResultSection("hide");
+	hideErrorAlert("hide");
 });
 
 function sendData() {
-	alert("Submitted");
 
 	var name = document.getElementById("name").value;
 	var phone = document.getElementById("phone").value;
@@ -36,6 +35,19 @@ function sendData() {
 	var remarks = document.getElementById("remarks").value;
 	var remember = document.getElementById("remember");
 
+	var areThereErros = validation(sqm);
+	if (areThereErros) {
+		hideErrorAlert("");
+		hideResultSection("hide");
+		return true;
+	}
+
+	if (sqm < 1 || sqm > 1000) {
+		console.log("Total sqm is not valid");
+	} else {
+		console.log("Total sqm is valid");
+	}
+
 	document.getElementById("newName").textContent = name;
 	document.getElementById("newPhone").textContent = phone;
 	document.getElementById("newEmail").textContent = email;
@@ -48,11 +60,34 @@ function sendData() {
 	document.getElementById("newBedrooms").textContent = bedrooms;
 	document.getElementById("newDate").textContent = date;
 	document.getElementById("newRemarks").textContent = remarks;
-	var newRemember = document.getElementById("newRemember");
+	var newRemember = document.getElementById("new-remember-word");
+
 	if (remember.checked == true) {
 		newRemember.style.display = "block";
 	} else {
 		newRemember.style.display = "none";
 	}
+
+	hideErrorAlert("hide");
+	hideResultSection("");
 }
 
+//Hide result section
+function hideResultSection(action) {
+	var result = document.getElementById("result-section");
+	if (action == "hide") {
+		result.style.display = "none";
+	} else {
+		result.style.display = "block";
+	}
+}
+
+//Hide error alert
+function hideErrorAlert(action) {
+	var result = document.getElementById("error-alert");
+	if (action == "hide") {
+		result.style.display = "none";
+	} else {
+		result.style.display = "block";
+	}
+}
