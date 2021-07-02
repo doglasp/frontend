@@ -42,12 +42,6 @@ function sendData() {
 		return true;
 	}
 
-	if (sqm < 1 || sqm > 1000) {
-		console.log("Total sqm is not valid");
-	} else {
-		console.log("Total sqm is valid");
-	}
-
 	document.getElementById("newName").textContent = name;
 	document.getElementById("newPhone").textContent = phone;
 	document.getElementById("newEmail").textContent = email;

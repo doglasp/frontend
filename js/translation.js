@@ -1,7 +1,6 @@
 /**
  * 
  */
-$.getScript("translate-collection.js");
 
 function retrieveTranslation(language, string) {
 
@@ -103,4 +102,9 @@ function retrieveTranslation(language, string) {
 	var element = document.getElementById("new-remember-word");
 	element.innerHTML = language.remembered;
 
+	var element = document.getElementById("sqm-error");
+	element.innerHTML = language.sqm_invalid;
+	
+		var element = document.getElementById("navbarDropdownMenuLink");
+	element.innerHTML = language.language_name;
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Property Owner: Just Relax and Collect Rent | Tabas</title>
+<title>Tabas</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -51,7 +51,10 @@
 				<li class="nav-item dropdown active"><a
 					class="nav-link dropdown-toggle" href="#"
 					id="navbarDropdownMenuLink" data-toggle="dropdown"
-					aria-haspopup="true" aria-expanded="false"> Language </a>
+					aria-haspopup="true" aria-expanded="false"> <script
+							type="text/javascript">
+						document.write(lang.language_name)
+					</script> </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="#"
 							onclick="retrieveTranslation(en_us)">English</a> <a
@@ -62,14 +65,13 @@
 		</div>
 	</nav>
 
-	<section class="main"
-		style="background-image: url('img/living-room.jpg');">
+	<section class="main">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 my-header"></div>
 			</div>
 			<div class="row">
-				<div class="col-sm-7">
+				<div class="col-lg-7 col-sm-12">
 					<span class="slogan-title-golden" id="title1-word"> <script
 							type="text/javascript">
 						document.write(lang.title_one)
@@ -86,7 +88,7 @@
 						</script>
 					</p>
 				</div>
-				<div class="col-sm-5 register-form">
+				<div class="col-lg-5 col-sm-12 register-form">
 					<h4 class="form-title" id="welcome-word">
 						<script type="text/javascript">
 							document.write(lang.welcome)
@@ -128,7 +130,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-6">
+							<div class="col-lg-6 col-sm-12">
 								<div class="form-group">
 									<label for="city" id="city-word"> <script
 											type="text/javascript">
@@ -144,7 +146,7 @@
 									</select>
 								</div>
 							</div>
-							<div class="col-sm-6">
+							<div class="col-lg-6 col-sm-12">
 								<div class="form-group">
 									<label for="neighborhood" id="neighborhood-word"> <script
 											type="text/javascript">
@@ -157,7 +159,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-sm-6">
+							<div class="col-lg-6 col-sm-12">
 								<div class="form-group">
 									<label for="sqm" id="sqm-word"> <script
 											type="text/javascript">
@@ -167,7 +169,7 @@
 										required="required">
 								</div>
 							</div>
-							<div class="col-sm-6">
+							<div class="col-lg-6 col-sm-12">
 								<div class="form-group">
 									<label for="parking" id="parking-word"> <script
 											type="text/javascript">
@@ -274,7 +276,7 @@
 						<div class="row">
 							<div class="col-sm-12">
 								<div id="error-alert" class="alert alert-danger" role="alert">
-									<span id="sqm-error" name="sqm-error">teste</span>
+									<span id="sqm-error" name="sqm-error"></span>
 								</div>
 							</div>
 						</div>
@@ -289,169 +291,164 @@
 			<div class="result-form">
 				<div class="row">
 					<div class="col-sm-12">
-						<div class="row">
-							<div class="col-sm-12">
-								<h4 id="new-success-word">
-									<script type="text/javascript">
-										document.write(lang.success)
-									</script>
-								</h4>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<p id="new-name-word">
-									<script type="text/javascript">
-										document.write(lang.name)
-									</script>
-								</p>
-							</div>
-							<div class="col-sm-10">
-								<p id="newName" name="newName"></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<p id="new-phone-word">
-									<script type="text/javascript">
-										document.write(lang.phone)
-									</script>
-								</p>
-							</div>
-							<div class="col-sm-10">
-								<p id="newPhone" name="newPhone"></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<span>Email:</span>
-							</div>
-							<div class="col-sm-10">
-								<p id="newEmail" name="newEmail"></p>
-							</div>
-						</div>
+						<h4 id="new-success-word">
+							<script type="text/javascript">
+								document.write(lang.success)
+							</script>
+						</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<p id="new-name-word">
+							<script type="text/javascript">
+								document.write(lang.name)
+							</script>
+						</p>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newName" name="newName"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<p id="new-phone-word">
+							<script type="text/javascript">
+								document.write(lang.phone)
+							</script>
+						</p>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newPhone" name="newPhone"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<span>Email:</span>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newEmail" name="newEmail"></p>
+					</div>
+				</div>
 
-						<div class="row">
-							<div class="col-sm-2">
-								<p id="new-city-word">
-									<script type="text/javascript">
-										document.write(lang.city)
-									</script>
-								</p>
-							</div>
-							<div class="col-sm-10">
-								<p id="newCity" name="newCity"></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<p id="new-neighborhood-word">
-									<script type="text/javascript">
-										document.write(lang.neighborhood)
-									</script>
-								</p>
-							</div>
-							<div class="col-sm-10">
-								<p id="newNeighborhood" name="newNeighborhood"></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<p id="new-sqm-word">
-									<script type="text/javascript">
-										document.write(lang.sqm)
-									</script>
-								</p>
-							</div>
-							<div class="col-sm-10">
-								<p id="newSqm" name="newSqm"></p>
-							</div>
-
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<p id="new-parking-word">
-									<script type="text/javascript">
-										document.write(lang.parking)
-									</script>
-								</p>
-							</div>
-							<div class="col-sm-10">
-								<p id="newParking" name="newParking"></p>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-sm-2">
-								<p id="new-adress-word">
-									<script type="text/javascript">
-										document.write(lang.adress)
-									</script>
-								</p>
-							</div>
-							<div class="col-sm-9">
-								<p id="newAdress" name="newAdress"></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<p id="new-value-word">
-									<script type="text/javascript">
-										document.write(lang.value)
-									</script>
-								</p>
-							</div>
-							<div class="col-sm-10">
-								<p id="newErv" name="newErv"></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<p id="new-bedrooms-word">
-									<script type="text/javascript">
-										document.write(lang.bedrooms)
-									</script>
-								</p>
-							</div>
-							<div class="col-sm-10">
-								<p id="newBedrooms" name="newBedrooms"></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<p id="new-date-word">
-									<script type="text/javascript">
-										document.write(lang.date)
-									</script>
-								</p>
-							</div>
-							<div class="col-sm-10">
-								<p id="newDate" name="newDate"></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-2">
-								<p id="new-remarks-word">
-									<script type="text/javascript">
-										document.write(lang.remarks)
-									</script>
-								</p>
-							</div>
-							<div class="col-sm-10">
-								<p id="newRemarks" name="newRemarks"></p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-12">
-								<p id="new-remember-word" name="new-remember-word">
-									<script type="text/javascript">
-										document.write(lang.remembered)
-									</script>
-								</p>
-							</div>
-						</div>
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<p id="new-city-word">
+							<script type="text/javascript">
+								document.write(lang.city)
+							</script>
+						</p>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newCity" name="newCity"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<p id="new-neighborhood-word">
+							<script type="text/javascript">
+								document.write(lang.neighborhood)
+							</script>
+						</p>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newNeighborhood" name="newNeighborhood"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<p id="new-sqm-word">
+							<script type="text/javascript">
+								document.write(lang.sqm)
+							</script>
+						</p>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newSqm" name="newSqm"></p>
 					</div>
 
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<p id="new-parking-word">
+							<script type="text/javascript">
+								document.write(lang.parking)
+							</script>
+						</p>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newParking" name="newParking"></p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<p id="new-adress-word">
+							<script type="text/javascript">
+								document.write(lang.adress)
+							</script>
+						</p>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newAdress" name="newAdress"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<p id="new-value-word">
+							<script type="text/javascript">
+								document.write(lang.value)
+							</script>
+						</p>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newErv" name="newErv"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<p id="new-bedrooms-word">
+							<script type="text/javascript">
+								document.write(lang.bedrooms)
+							</script>
+						</p>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newBedrooms" name="newBedrooms"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<p id="new-date-word">
+							<script type="text/javascript">
+								document.write(lang.date)
+							</script>
+						</p>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newDate" name="newDate"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-lg-2">
+						<p id="new-remarks-word">
+							<script type="text/javascript">
+								document.write(lang.remarks)
+							</script>
+						</p>
+					</div>
+					<div class="col-sm-12 col-lg-10">
+						<p id="newRemarks" name="newRemarks"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p id="new-remember-word" name="new-remember-word">
+							<script type="text/javascript">
+								document.write(lang.remembered)
+							</script>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>

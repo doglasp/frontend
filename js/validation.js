@@ -2,20 +2,16 @@
  * 
 
  */
-$.getScript("translate-collection.js");
 
 function validation(sqm) {
 
-	var areThereErros;
+	var areThereErros = false;
 	
-	if (sqm < 1) {
-		document.getElementById("sqm-error").textContent = lang.sqm_small;
+	if (sqm < 1 || sqm > 10000) {
+		document.getElementById("sqm-error").textContent = lang.sqm_invalid;
 		areThereErros = true;
-	} else if (sqm > 10000) {
-		document.getElementById("sqm-error").textContent = lang.sqm_big;
-		areThereErros = true;
+		console.log(lang.sqm_invalid);
 	}
 
-	console.log(areThereErros);
 	return areThereErros;
 }
