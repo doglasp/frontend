@@ -1,4 +1,5 @@
 var en_us = {
+	language_code: "en_us",
 	language_name: "Language",
 	welcome: "Be our partner!",
 	name: "Name:",
@@ -19,10 +20,11 @@ var en_us = {
 	button: "Get in touch",
 	success: "Your form was submitted successfully!",
 	remembered: "We are going to remember you.",
-	sqm_invalid: "Total sqm is invalid: it must be between one and 10000 squared meters."
+	sqm_invalid: "The total of squared meters is invalid: it must be between one and 10000 squared meters."
 }
 
 var pt_br = {
+	language_code: "pt_br",
 	language_name: "Linguagem",
 	welcome: "Seja nosso parceiro!",
 	name: "Nome:",
@@ -43,5 +45,5 @@ var pt_br = {
 	button: "Entre em contato",
 	success: "Formulário submetido com sucesso!",
 	remembered: "Nós vamos lembrar de você.",
-	sqm_invalid: "Total m<sup>2</sup> é inválido: precisa ser maior que 1 e menor que 10000 metros quadrados."
+	sqm_invalid: "O total de metros quadrados é inválido: precisa ser maior que 1 e menor que 10000 metros quadrados."
 }

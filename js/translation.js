@@ -6,7 +6,7 @@ function retrieveTranslation(language, string) {
 
 	//change language
 	var element = document.getElementById("languague");
-	element.innerHTML = language;
+	element.innerHTML = "<script>var lang ="+string+";</script>";
 
 	//change language of the titles. 
 	var element = document.getElementById("title1-word");
@@ -104,7 +104,7 @@ function retrieveTranslation(language, string) {
 
 	var element = document.getElementById("sqm-error");
 	element.innerHTML = language.sqm_invalid;
-	
-		var element = document.getElementById("navbarDropdownMenuLink");
+
+	var element = document.getElementById("navbarDropdownMenuLink");
 	element.innerHTML = language.language_name;
 }

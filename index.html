@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Tabas</title>
+<title>TABAS</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -57,9 +57,9 @@
 					</script> </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="#"
-							onclick="retrieveTranslation(en_us)">English</a> <a
+							onclick="retrieveTranslation(en_us,'en_us')">English</a> <a
 							class="dropdown-item" href="#"
-							onclick="retrieveTranslation(pt_br)">Português</a>
+							onclick="retrieveTranslation(pt_br,'pt_br')">Português</a>
 					</div></li>
 			</ul>
 		</div>
@@ -299,7 +299,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<p id="new-name-word">
 							<script type="text/javascript">
 								document.write(lang.name)
@@ -311,7 +311,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<p id="new-phone-word">
 							<script type="text/javascript">
 								document.write(lang.phone)
@@ -323,7 +323,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<span>Email:</span>
 					</div>
 					<div class="col-sm-12 col-lg-10">
@@ -332,7 +332,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<p id="new-city-word">
 							<script type="text/javascript">
 								document.write(lang.city)
@@ -344,7 +344,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<p id="new-neighborhood-word">
 							<script type="text/javascript">
 								document.write(lang.neighborhood)
@@ -356,7 +356,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<p id="new-sqm-word">
 							<script type="text/javascript">
 								document.write(lang.sqm)
@@ -369,7 +369,7 @@
 
 				</div>
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<p id="new-parking-word">
 							<script type="text/javascript">
 								document.write(lang.parking)
@@ -382,7 +382,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<p id="new-adress-word">
 							<script type="text/javascript">
 								document.write(lang.adress)
@@ -394,7 +394,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<p id="new-value-word">
 							<script type="text/javascript">
 								document.write(lang.value)
@@ -406,7 +406,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<p id="new-bedrooms-word">
 							<script type="text/javascript">
 								document.write(lang.bedrooms)
@@ -418,7 +418,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<p id="new-date-word">
 							<script type="text/javascript">
 								document.write(lang.date)
@@ -430,7 +430,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-12 col-lg-2">
+					<div class="col-sm-12 col-lg-2 result-title">
 						<p id="new-remarks-word">
 							<script type="text/javascript">
 								document.write(lang.remarks)
